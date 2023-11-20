@@ -6,11 +6,12 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:14:14 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/20 09:12:15 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/20 14:08:51 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	ft_format(va_list ap, const char format)
 {
@@ -24,11 +25,13 @@ int	ft_format(va_list ap, const char format)
 	if (format == 'i' || format == 'd')
 		size += ft_printnb(va_arg(ap, int));
 	if (format == '%')
-		size += ft_printp(va_arg(ap, char));
+		size += ft_printp();
 	if (format == 'u')
 		size += ft_printui(va_arg(ap, unsigned int));
 	if (format == 'x' || format == 'X')
-		size += ft_printhex(va_arg(ap, int));
+		size += ft_printhex(va_arg(ap, unsigned int), format);
+	if (format == 'p')
+		size += ft_printptr(va_arg(ap, unsigned long long), format);
 	return (size);
 }
 
@@ -41,19 +44,19 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	size = 0;
 	va_start(ap, format);
-	while (str[i])
+	while (format[i])
 	{
-		if (str[i] == '%')
+		if (format[i] == '%')
 		{
-			size += ft_format(ap, str[i + 1]);
+			size += ft_format(ap, format[i + 1]);
 			i++;
 		}
 		else
 		{
-			size += ft_printc(str[i]);
+			size += ft_printc(format[i]);
 			i++;
 		}
 	}
 	va_end(ap);
-	return ((size);)
+	return ((size));
 }

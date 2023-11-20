@@ -6,14 +6,14 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:12:07 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/20 11:20:28 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/20 14:04:03 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft.h"
+# include "libft/libft.h"
 # include <stdarg.h>
 
 int		ft_printc(int c);
@@ -27,6 +27,9 @@ int		ft_hexsize(unsigned int nb);
 void	ft_writehex(unsigned int nb, const char format);
 int		ft_printhex(unsigned int nb, const char format);
 int		ft_format(va_list ap, const char format);
+int		ft_ptrsize(unsigned long long nb);
+void	ft_writeptr(unsigned long long nb, const char format);
+int		ft_printptr(unsigned long long nb, const char format);
 int		ft_printf(const char *format, ...);
 
 #endif

@@ -6,9 +6,11 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 09:33:13 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/20 10:19:23 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/20 14:11:13 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_ptrsize(unsigned long long nb)
 {
@@ -33,9 +35,9 @@ void	ft_writeptr(unsigned long long nb, const char format)
 	else
 	{
 		if (nb <= 9)
-			ft_putchar(nb + '0');
+			ft_printc(nb + '0');
 		else
-			ft_putchar(nb - 10 + 'a');
+			ft_printc(nb - 10 + 'a');
 	}
 }
 
@@ -43,8 +45,9 @@ int	ft_printptr(unsigned long long nb, const char format)
 {
 	int size;
 	if (!nb)
-		return (ft_putstr("(nil)"));
-	size += ft_putstr("0x");
-	size += ft_writeptr(nb, format);
-	return (ft_ptrsize(size));
+		return (ft_printstr("(nil)"));
+	size += ft_printstr("0x");
+	ft_writeptr(nb, format);
+	size += ft_ptrsize(nb);
+	return (size);
 }
