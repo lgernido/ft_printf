@@ -5,11 +5,12 @@ NAME		= libftprintf.a
 CC			= cc
 CFLAGS		= -Wall -Werror -Wextra
 AR 			= ar -rcs
+INCLUDE		= /include/ft_printf.h
 
 ###########################################################################
 #### SOURCES
 
-SRC_FILES	= ft_easyprint.c ft_printf.c ft_printhex.c ft_printui.c
+SRC_FILES	= /src/
 
 OBJ_FILES	= $(SRC_FILES:.c=.o)
 
@@ -18,6 +19,12 @@ OBJ_FILES	= $(SRC_FILES:.c=.o)
 
 $(NAME) : ${OBJ_FILES}
 		${AR} ${NAME} ${OBJ_FILES}
+
+$(LIBFT) :
+		make -C libft
+
+%.o: %.c $(INCLUDE)
+    $(CC) $(FLAGS) -I ./ -c $< -o $@
 
 all : clean fclean
 

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printhex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciegernidos <luciegernidos@student.42    +#+  +:+       +#+        */
+/*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/19 15:41:53 by luciegernid       #+#    #+#             */
-/*   Updated: 2023/11/19 15:50:49 by luciegernid      ###   ########.fr       */
+/*   Created: 2023/11/20 08:09:07 by lgernido          #+#    #+#             */
+/*   Updated: 2023/11/20 11:20:01 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_hexsize(unsigned	int nb)
+int	ft_hexsize(unsigned int nb)
 {
 	int	len;
 
@@ -47,10 +47,10 @@ void	ft_writehex(unsigned int nb, const char format)
 int	ft_printhex(unsigned int nb, const char format)
 {
 	if (nb == 0)
-    {
+	{
 		write(1, "0", 1);
-        return(1);
-    }
+		return (1);
+	}
 	else
 		ft_writehex(nb, format);
 	return (ft_hexsize(nb));

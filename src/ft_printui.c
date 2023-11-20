@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printui.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciegernidos <luciegernidos@student.42    +#+  +:+       +#+        */
+/*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/19 15:27:29 by luciegernid       #+#    #+#             */
-/*   Updated: 2023/11/19 15:39:27 by luciegernid      ###   ########.fr       */
+/*   Created: 2023/11/20 08:09:16 by lgernido          #+#    #+#             */
+/*   Updated: 2023/11/20 08:10:52 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_nbsize(unsigned	int n)
+int	ft_nbsize(unsigned int n)
 {
 	int	size;
 
@@ -31,7 +31,7 @@ char	*ft_uitoa(unsigned int n)
 	int		size;
 
 	size = ft_nbsize(n);
-	nb = (char *)malloc(sizeof(char) * (size + 1));
+	nb = malloc(sizeof(char) * (size + 1));
 	if (!nb)
 		return (0);
 	nb[size] = '\0';
@@ -46,15 +46,15 @@ char	*ft_uitoa(unsigned int n)
 
 int	ft_printui(unsigned int n)
 {
-	int		size;
-	char	*nb;
+	int size;
+	char *nb;
 
 	size = 0;
 	if (n == 0)
-    {
-    	write(1, "0", 1);
-        size = 1;
-    }
+	{
+		write(1, "0", 1);
+		size = 1;
+	}
 	else
 	{
 		nb = ft_uitoa(n);
