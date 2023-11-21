@@ -4,7 +4,7 @@
 NAME		= libftprintf.a
 CC			= cc
 CFLAGS		= -Wall -Werror -Wextra
-AR 			= ar -rcs
+AR 			= ar -rc
 INCLUDE		= ft_printf.h
 LIBFT		= libft
 
@@ -19,23 +19,25 @@ OBJ_FILES	= $(SRC_FILES:.c=.o)
 ###########################################################################
 #### RULES
 
-$(NAME) : ${LIBFT} ${OBJ_FILES}
-		${AR} ${NAME} ${LIBFT} ${OBJ_FILES}
+$(NAME) : ${OBJ_FILES}
+		make -C $(LIBFT)
+		cp $(LIBFT)/libft.a .
+		mv libft.a ${NAME}
+		${AR} ${NAME} ${OBJ_FILES}
 
 %.o: %.c $(INCLUDE)
 	$(CC) $(FLAGS) -I ./ -c $< -o $@
-
-$(LIBFT):
-		make -C $(LIBFT)
 
 
 all : clean fclean 
 
 clean :
 	rm -f *.o
+	make clean -C $(LIBFT)
 
 fclean : clean
 	rm -f ${NAME}
+	make fclean -C $(LIBFT)
 
 re : fclean ${NAME}
 

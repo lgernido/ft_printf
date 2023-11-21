@@ -6,7 +6,7 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:52:20 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/16 14:53:17 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:04:57 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
-		return (NULL);
+		return ;
 	while (lst)
 	{
 		(*f)(lst->content);

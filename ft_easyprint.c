@@ -6,9 +6,11 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:48:17 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/19 13:52:13 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:18:07 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_printc(int c)
 {

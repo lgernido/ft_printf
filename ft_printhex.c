@@ -6,9 +6,11 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 08:09:07 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/20 11:20:01 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:35:40 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_hexsize(unsigned int nb)
 {

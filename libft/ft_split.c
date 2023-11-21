@@ -6,7 +6,7 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 08:17:11 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/15 12:08:01 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:03:51 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,29 +41,6 @@ static size_t	word_size(char const *s, char c)
 		len++;
 	}
 	return (len);
-}
-
-static char	*ft_strndup(const char *s, size_t n)
-{
-	char	*dup;
-	size_t	i;
-	size_t	size;
-
-	size = ft_strlen(s);
-	if (size > n)
-		dup = malloc(sizeof(char) * (n + 1));
-	else
-		dup = malloc(sizeof(char) * (size + 1));
-	if (dup == 0)
-		return (NULL);
-	i = 0;
-	while (s[i] && i < n)
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	dup[i] = 0;
-	return (dup);
 }
 
 static void	ft_protection(char **tab)

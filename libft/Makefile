@@ -5,6 +5,7 @@ NAME		= libft.a
 CC			= cc
 CFLAGS		= -Wall -Werror -Wextra
 INCLUDE		= libft.h
+AR 			= ar -rc 
 
 ###########################################################################
 #### SOURCES
@@ -21,7 +22,7 @@ OBJ_FILES	= $(SRC_FILES:.c=.o)
 #### RULES
 
 $(NAME) : ${OBJ_FILES}
-		${NAME} ${OBJ_FILES}
+		${AR} ${NAME} ${OBJ_FILES}
 
 %.o: %.c $(INCLUDE)
 	$(CC) $(FLAGS) -I ./ -c $< -o $@

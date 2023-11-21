@@ -6,12 +6,11 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:14:14 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/20 14:08:51 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:17:50 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_format(va_list ap, const char format)
 {
