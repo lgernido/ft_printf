@@ -6,7 +6,7 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:14:14 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/21 10:17:50 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:47:51 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@ int	ft_format(va_list ap, const char format)
 
 	size = 0;
 	if (format == 'c')
-		size += ft_printc(va_arg(ap, int));
+		size = ft_printc(va_arg(ap, int));
 	if (format == 's')
-		size += ft_printstr(va_arg(ap, char *));
+		size = ft_printstr(va_arg(ap, char *));
 	if (format == 'i' || format == 'd')
-		size += ft_printnb(va_arg(ap, int));
+		size = ft_printnb(va_arg(ap, int));
 	if (format == '%')
-		size += ft_printp();
+		size = ft_printp();
 	if (format == 'u')
-		size += ft_printui(va_arg(ap, unsigned int));
+		size = ft_printui(va_arg(ap, unsigned int));
 	if (format == 'x' || format == 'X')
-		size += ft_printhex(va_arg(ap, unsigned int), format);
+		size = ft_printhex(va_arg(ap, unsigned int), format);
 	if (format == 'p')
-		size += ft_printptr(va_arg(ap, unsigned long long), format);
+		size = ft_printptr(va_arg(ap, unsigned long long), format);
 	return (size);
 }
 

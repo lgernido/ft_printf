@@ -6,7 +6,7 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:48:17 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/21 10:18:07 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:32:44 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ int	ft_printstr(char *str)
 
 	i = 0;
 	if (!str)
-	{
-		ft_putstr("(null)");
-		return (6);
-	}
+		ft_printstr("(null)");
 	while (str[i])
 	{
 		write(1, &str[i], 1);

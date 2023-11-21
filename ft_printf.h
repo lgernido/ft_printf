@@ -6,7 +6,7 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:12:07 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/21 11:39:49 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:53:49 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_printnb(int n);
 int		ft_printp(void);
 int		ft_nbsize(unsigned int n);
 int		ft_printui(unsigned int n);
-int		ft_hexsize(unsigned int nb);
+int		ft_hexasize(unsigned int nb);
 int		ft_printhex(unsigned int nb, const char format);
 int		ft_format(va_list ap, const char format);
 int		ft_ptrsize(unsigned long long nb);
