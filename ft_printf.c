@@ -6,7 +6,7 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:14:14 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/22 09:23:45 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/22 13:17:20 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_format(va_list ap, const char format)
 	if (format == 'x' || format == 'X')
 		size = ft_printhex(va_arg(ap, unsigned int), format);
 	if (format == 'p')
-		size = ft_printptr(va_arg(ap, unsigned long long), format);
+		size = ft_printptr(va_arg(ap, unsigned long), format);
 	return (size);
 }
 
@@ -42,6 +42,8 @@ int	ft_printf(const char *format, ...)
 
 	i = 0;
 	size = 0;
+	if (format == NULL)
+		return (-1);
 	va_start(ap, format);
 	while (format[i])
 	{

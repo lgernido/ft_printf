@@ -6,13 +6,13 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 09:33:13 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/22 09:25:50 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:27:31 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_ptrsize(unsigned long long nb)
+int	ft_ptrsize(unsigned long nb)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ int	ft_ptrsize(unsigned long long nb)
 	return (len);
 }
 
-void	ft_writeptr(unsigned long long nb, const char format)
+void	ft_writeptr(unsigned long nb, const char format)
 {
 	if (nb >= 16)
 	{
@@ -41,7 +41,7 @@ void	ft_writeptr(unsigned long long nb, const char format)
 	}
 }
 
-int	ft_printptr(unsigned long long nb, const char format)
+int	ft_printptr(unsigned long nb, const char format)
 {
 	int	size;
 
