@@ -6,7 +6,7 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:48:17 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/21 15:32:44 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/21 18:49:51 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	ft_printstr(char *str)
 
 	i = 0;
 	if (!str)
-		ft_printstr("(null)");
+	{
+		ft_putstr("(null)");
+		return (6);
+	}
 	while (str[i])
 	{
 		write(1, &str[i], 1);
@@ -32,6 +35,7 @@ int	ft_printstr(char *str)
 	}
 	return (i);
 }
+
 int	ft_printnb(int n)
 {
 	int		size;

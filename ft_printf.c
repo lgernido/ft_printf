@@ -6,7 +6,7 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 13:14:14 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/21 15:47:51 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/22 09:23:45 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,8 @@ int	ft_printf(const char *format, ...)
 			i++;
 		}
 		else
-		{
 			size += ft_printc(format[i]);
-			i++;
-		}
+		i++;
 	}
 	va_end(ap);
 	return ((size));
