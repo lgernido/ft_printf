@@ -6,7 +6,7 @@
 /*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 08:09:16 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/21 15:59:42 by lgernido         ###   ########.fr       */
+/*   Updated: 2023/11/22 09:29:54 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ char	*ft_uitoa(unsigned int n)
 
 int	ft_printui(unsigned int n)
 {
-	int size;
-	char *nb;
+	int		size;
+	char	*nb;
 
 	size = 0;
 	if (n == 0)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciegernidos <luciegernidos@student.42    +#+  +:+       +#+        */
+/*   By: lgernido <lgernido@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 11:16:16 by lgernido          #+#    #+#             */
-/*   Updated: 2023/11/19 15:14:33 by luciegernid      ###   ########.fr       */
+/*   Updated: 2023/11/22 09:30:20 by lgernido         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strndup(const char *s, size_t n)
 {
-	char *dup;
-	size_t i;
-	size_t size;
+	char	*dup;
+	size_t	i;
+	size_t	size;
 
 	size = ft_strlen(s);
 	if (size > n)

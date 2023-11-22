@@ -21,8 +21,7 @@ OBJ_FILES	= $(SRC_FILES:.c=.o)
 
 $(NAME) : ${OBJ_FILES}
 		make -C $(LIBFT)
-		cp $(LIBFT)/libft.a .
-		mv libft.a ${NAME}
+		cp $(LIBFT)/libft.a ${NAME}
 		${AR} ${NAME} ${OBJ_FILES}
 
 %.o: %.c $(INCLUDE)
