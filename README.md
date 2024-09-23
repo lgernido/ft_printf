@@ -44,4 +44,36 @@ The files are organized as follows :
 - ft_printhex.c : Handles the hexadecimals format
 - ft_printfptr.c : Handles the pointer format
 - ft_printui.c : Handles the unsigned integer format
-- ft_printf.c : Contains the ft_printf function. Goes through the arguments and sends them to the correct format handling functions in the other files. 
+- ft_printf.c : Contains the ft_printf function. Goes through the arguments and sends them to the correct format handling functions in the other files.
+
+## :battery: Example Use
+
+Let's consider the following main function :
+
+```
+int main(void)
+{
+  char c = a;
+  int nb = 42;
+  ft_printf("character: %c\n integer: %i\n, hexadecimal: %x", c, nb, nb);
+  return (0)
+}
+```
+
+Here, we go through the first argument and print everyhing that is between the double quotes. When the *%* is met we look at the next character to identify what is the format of the variable we need to print. 
+The first time, we encounter **"%c"** which is the identifier for a single character that will be replaced by the variable *c*, the character **a** using the **printc** function. 
+The second time, same process goes for **"%i""** except this time we will print the integer defined by the variable *nb*, the integer **42** using the **ft_printnb** function. 
+Lastly, for **"%x"** the integer 42 will be replaced by its hexadecimal format which is **2a** using the **ft_printhex** function. 
+
+If no percent sign is met, the function only prints whats between double quotes. 
+
+The function always returns the number of characters printed. 
+
+In this exemple the output would have been : 
+
+```
+character: c
+integer: 42
+hexadecimal: 2a
+```
+
