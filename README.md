@@ -25,7 +25,7 @@ int	ft_printf(const char *format, ...);
 ```
 When ft_printf is called, we don't know how many elements a person wants to print hence the need for a variadic function. 
 
-In order to build this function we can use the variable **va_list** and the macros **va_start**, **va_arg** and **va_end** included in the *<stdarg.h>* library.
+In order to build this function we can use the variable type **va_list** and the macros **va_start**, **va_arg** and **va_end** included in the *<stdarg.h>* library.
 
 **va_list** is an object type. It's a list of all the arguments passed to the ft_printf function.
 
@@ -53,16 +53,21 @@ Let's consider the following main function :
 ```
 int main(void)
 {
-  char c = a;
+  char c = 'a';
   int nb = 42;
-  ft_printf("character: %c\n integer: %i\n, hexadecimal: %x", c, nb, nb);
+  ft_printf("character: %c\ninteger: %i\nhexadecimal: %x\n", c, nb, nb);
   return (0)
 }
 ```
 
-Here, we go through the first argument and print everyhing that is between the double quotes. When the *%* is met we look at the next character to identify what is the format of the variable we need to print. 
-The first time, we encounter **"%c"** which is the identifier for a single character that will be replaced by the variable *c*, the character **a** using the **printc** function. 
+Here, we go through the first argument and print everyhing that is between the double quotes. When the *%* is met we look at the next character to identify what is the format of the variable we need to print.
+
+The variables listed after the first argument are stored into a list of type va_list. 
+
+While going trough the string, as we encounter **"%c"** which is the identifier for a single character, it will be replaced by the variable *c*, which is the first variable in the list that we access using the **va_arg** function. The **%c** will be replaced by the character **a** using the **printc** function. 
+
 The second time, same process goes for **"%i""** except this time we will print the integer defined by the variable *nb*, the integer **42** using the **ft_printnb** function. 
+
 Lastly, for **"%x"** the integer 42 will be replaced by its hexadecimal format which is **2a** using the **ft_printhex** function. 
 
 If no percent sign is met, the function only prints whats between double quotes. 
@@ -76,4 +81,4 @@ character: c
 integer: 42
 hexadecimal: 2a
 ```
-
+Moreover, the function would have returned **41**.
