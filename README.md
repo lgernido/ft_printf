@@ -5,15 +5,15 @@ The goal is recreate the printf function that is included in the *<stdio.h>* lib
 
 ### Formats to handle
 
-- %c --> a single character
-- %s --> a string
-- %p --> the void * pointer format
-- %d --> a decimal number (base 10)
-- %i --> an integger (base 10)
-- %u --> an unsigned decimal number (base 10)
-- %x --> an hexadecimal number (base 16) in lowercase format
-- %X --> an hexadecimal number (base 16) in uppercase format
-- %% --> a percent sign
+- %c → a single character
+- %s → a string
+- %p → the void * pointer format
+- %d → a decimal number (base 10)
+- %i → an integger (base 10)
+- %u → an unsigned decimal number (base 10)
+- %x → an hexadecimal number (base 16) in lowercase format
+- %X → an hexadecimal number (base 16) in uppercase format
+- %% → a percent sign
 
 ### New concept : Variadic functions 
 
